@@ -1,7 +1,7 @@
-const Sociallink = ({href,icon,itemClass}) => {
+const Sociallink = ({href,icon,id}) => {
   return (
-    <li>
-      <a href={href} target="_blank" rel="noreferrer" className={itemClass}>
+    <li key={id}>
+      <a href={href} target="_blank" rel="noreferrer">
         <i className={icon}></i>
       </a>
     </li>

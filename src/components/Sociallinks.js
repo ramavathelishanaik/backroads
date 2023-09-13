@@ -1,15 +1,16 @@
 import { socialLinks } from "../data";
 import Sociallink from "./Sociallink";
-const Sociallinks = ({ parentClass, itemClass }) => {
+const Sociallinks = () => {
   return (
-    <ul className={parentClass}>
-      {socialLinks.map((link) => {
-        const { id, href, icon } = link;
-        return (
-          <Sociallink key={id} href={href} icon={icon} itemClass={itemClass} />
-        );
-      })}
-    </ul>
+       <ul className="social-icons">
+            {socialLinks.map((socialIcon) => {
+              const { id, href, icon } = socialIcon;
+              return (
+                <Sociallink key={id} href={href} icon={icon}  />
+              );
+            })}
+          </ul>
+  
   );
 };
 export default Sociallinks;
